@@ -4,15 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Array iteration with for of loop</title>
+    <title>06 Array iteration with for of loop</title>
   </head>
   <body>
     <script>
       const names = ["michael", "stefan", "christian", "sarah"];
 
+      //iteration with for of loop
       for (const [i, name] of names.entries()) {
         console.log(`${name} is the ${i} name.`);
       }
+
+      //iteration with map
+      names.map((name, i) => console.log(`${name} is the ${i} name.`));
     </script>
   </body>
 </html>
