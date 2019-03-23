@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>array - Insert list as html fragment</title>
+  </head>
+  <body>
+    <script>
+      const data = [
+        { name: "berlusconi", country: "italy", continent: "europe" },
+        { name: "merkel", country: "germany", continent: "europe" },
+        { name: "trump", country: "usa", continent: "north-america" }
+      ];
+
+      const markup = `<ul>
+                              ${data
+                                .map(
+                                  item =>
+                                    `<li>${item.name}</li><li>${
+                                      item.country
+                                    }</li><li>${item.continent}</li><br />`
+                                )
+                                .join("")}
+                            </ul>`;
+
+      document.body.innerHTML = markup;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>template literals for html fragments</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        job: "seo & analytics consultant",
+        name: "matthias kupperschmidt",
+        city: "undefined",
+        bio: "very cool guy"
+      };
+
+      const markup = `
+                                    <h1>${person.name}</h1>
+                                    <div>${person.job}</div>
+                                    <p class="location">place: ${
+                                      person.city
+                                    }</p>
+                                    <p class="bio">description: ${
+                                      person.bio
+                                    }</p>
+                                  `;
+
+      document.body.innerHTML = markup;
+    </script>
+  </body>
+</html>

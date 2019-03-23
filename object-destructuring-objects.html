@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Object - destructuring objects</title>
+  </head>
+  <body>
+    <h1>Object - destructuring objects</h1>
+    <h2>Check source code and browser console...</h2>
+    <script>
+      const person = {
+        name: "matthias kupperschmidt",
+        country: "denmark",
+        job: "SEO & Analytics consultant"
+      };
+
+      const { country: state, job: occupation } = person;
+
+      console.log(state, occupation);
+    </script>
+  </body>
+</html>

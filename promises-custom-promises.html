@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Custom promises</title>
+  </head>
+  <body>
+    <script>
+      const p = new Promise((resolve, reject) => {
+        //I try to find in the resolved data what I am looking for
+        //if I have what I need:
+        if (true) {
+          resolve("Matthias is cool.");
+        } else {
+          reject(Error("No matching data was found!"));
+        }
+      });
+
+      // prettier-ignore
+      p
+      .then(data => console.log(data))
+      .catch(err => console.error(err));
+    </script>
+  </body>
+</html>
